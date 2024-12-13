@@ -1,0 +1,3 @@
+En el archivo SecurityConfig vamos a configurar toda la arquitectura de spring security
+
+-Vamos a implementar que un usuario pueda acceder a los endpoints pero teniendo los usuarios con un provider
