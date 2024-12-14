@@ -57,7 +57,8 @@ public class SecurityConfig {
                     * 3.Cualquier otra solicutd que no especifiquemos como "/hola" o "/holaseguridad", etc, no le permitiremos el acceso
                     * */
                     http.requestMatchers(HttpMethod.GET, "/app/hola").permitAll();
-                    http.requestMatchers(HttpMethod.GET, "/app/holaSeguridad").hasAuthority("CREATE");
+                    http.requestMatchers(HttpMethod.GET, "/app/get").hasAuthority("READ");
+                    http.requestMatchers(HttpMethod.PATCH, "/app/patch").hasAuthority("REFACTOR");
                     http.anyRequest().denyAll();
                 })
                 .build();
